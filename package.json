@@ -4,10 +4,10 @@
   "description": "music app server",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --config=Scripts/config/webpack.dev.js --watch",
-    "build": "webpack --config=Scripts/config/webpack.prod.js"
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -19,5 +19,14 @@
     "mongoose": "^6.9.0",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.20"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChandralingamP/music-app-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChandralingamP/music-app-server/issues"
+  },
+  "homepage": "https://github.com/ChandralingamP/music-app-server#readme"
 }
