@@ -32,7 +32,7 @@ app.use('/recent',recent)
 app.use('/playlist',playlist)
 app.use('/audio',audio)
 
-app.get("/", (req, res) => { res.send("Hii")});
+app.get("/", (req, res) => { res.send("hello guyss")});
 
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
 
