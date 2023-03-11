@@ -1,18 +1,18 @@
+
+require("dotenv").config();
 const axios = require("axios");
 const express = require("express");
 const cors = require("cors");
 const { default: mongoose } = require("mongoose");
 
 const app = express();
-const port = 5000;
+const PORT = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
-// Create Connection
-
 // let uri = "mongodb://127.0.0.1:27017/MusicApp?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.2";
-let uri = "mongodb://ErrorPostingApplication:ErrorPostingApplication@ac-yrhngqc-shard-00-00.tdlpup9.mongodb.net:27017,ac-yrhngqc-shard-00-01.tdlpup9.mongodb.net:27017,ac-yrhngqc-shard-00-02.tdlpup9.mongodb.net:27017/?ssl=true&replicaSet=atlas-12gtpz-shard-0&authSource=admin&retryWrites=true&w=majority/BookStore";
-mongoose.connect(uri);
+let uri = "mongodb://musicapp:musicapp@ac-jl3soxk-shard-00-00.bwqynof.mongodb.net:27017,ac-jl3soxk-shard-00-01.bwqynof.mongodb.net:27017,ac-jl3soxk-shard-00-02.bwqynof.mongodb.net:27017/MusicApp?ssl=true&replicaSet=atlas-sjms9a-shard-0&authSource=admin&retryWrites=true";
+mongoose.connect(process.env.MONGO_URL);
 const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("Connection made");
@@ -34,6 +34,6 @@ app.use('/audio',audio)
 
 app.get("/", (req, res) => { res.send("Hii")});
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
 
 module.exports = connection;

@@ -13,7 +13,6 @@ router.route("/add").post(async (req, res) => {
     res.status(400).json(err);
   }
 });
-
 router.route("/:id").get((req, res) => {
   let userId = req.params.id;
   if(userId.startsWith(":")){
@@ -25,6 +24,5 @@ router.route("/:id").get((req, res) => {
     .catch((err) => res.status(400).json(err.message));
   
 });
-
 
 module.exports = router;
