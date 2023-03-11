@@ -5,8 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "dev": "nodemon index.js",
-    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -20,9 +18,7 @@
     "mysql": "^2.18.1",
     "nodemon": "^2.0.20"
   },
-  "devDependencies": {
-    "webpack-cli": "^5.0.1"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ChandralingamP/music-app-server.git"
